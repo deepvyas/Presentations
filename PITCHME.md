@@ -53,10 +53,26 @@ amount of corpus available. Currently, to deal with this situation the complexit
 * In the mean time search for a bigger corpus especially in Indian languages,as well as annotation of prior exsisting is being carried out.
 
 #HSLIDE
+* A basic LSTM layer with depth 32 stacked above the CNN described above was tried out.
+* At current checkpoint it does not present much of a improvement due to various factors like:
+	* Model is too complex for the little data we have.
+	* It is not tuned much as training RNN is a tedious job and also this basic model does no good to us.
+	* A better model involves using techniques like autoencoders with feedback mechanisms like attention mechanism.
+#HSLIDE
+#Flaw discussion
+* The first and foremost flaw in following data driven approach is lack of sufficient amount of data.
+* One other reason for the lack in performance of the model is the dependency of the model on the paraphrasing part.
+* That part in itself is not the state-of-the-art.
+#VSLIDE
+* One other reason is the fact that only sentence level scoping is not that good an approximate.
+* Also the depth of the network needs to be incresed if only data driven approach is the future goal.
+* The above point again collapses to the point of lack of sufficient data.
+#HSLIDE
 ###Future possible work:
-* One possible issue with above model could be that it is unable to capture document level features.
+* Collect a larger corpus so as to tune the current basic to its fullest and at the same time think upon newer models.
+* One possible issue with above model could be that it is at a very rudimentary level able to capture document level features.
 * For improving that we can convolve not just over sentences but over documents.
-* Also could be used is an RNN-based approach wherein sentences are treated as time-step sequences inputs.
+* Also could be used is an RNN-based approach wherein more focus is on the part on building models like Attention based models.
 #HSLIDE
 ## References
 
